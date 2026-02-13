@@ -9,7 +9,7 @@ export class DBService {
     bucket;
 
     constructor() {
-        his.client
+        this.client
             .setEndpoint(conf.APPWRITE_URL) // Your Appwrite Endpoint
             .setProject(conf.APPWRITE_PROJECT_ID); // Your project ID
         
@@ -134,17 +134,11 @@ export class DBService {
     //     }
     // }
 
-    // async getFilePreview(fileId){
-    //     try {
-
-    //         return await this.bucket.getFilePreview(
-    //             conf.APPWRITE_BUCKET_ID,
-    //             fileId
-    //         )
-            
-    //     } catch (error) {
-    //         throw error;
-    //     }
+    // getFilePreview(fileId){
+    //     return this.bucket.getFilePreview(
+    //         conf.APPWRITE_BUCKET_ID,
+    //         fileId
+    //     );
     // }
 
 }

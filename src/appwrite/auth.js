@@ -51,10 +51,9 @@ export class AuthService {
             const user = await this.account.get();
             return user;
         } catch (error) {
-            throw error;
+            console.log("Appwrite Error ::", error);
+            return null;
         }
-
-        return null;
     }
 
     async logout() {

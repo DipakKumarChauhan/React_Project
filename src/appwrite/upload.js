@@ -44,17 +44,11 @@ export class UploadService {
         }
     }
 
-    async getFilePreview(fileId){
-        try {
-
-            return await this.bucket.getFilePreview(
-                conf.APPWRITE_BUCKET_ID,
-                fileId
-            )
-            
-        } catch (error) {
-            throw error;
-        }
+    getFilePreview(fileId){
+        return this.bucket.getFilePreview(
+            conf.APPWRITE_BUCKET_ID,
+            fileId
+        );
     }
 
 }
